@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS seekers;
+
+CREATE TABLE IF NOT EXISTS seekers (
+  id SERIAL PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  username VARCHAR(255) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  phone VARCHAR(12) NOT NULL,
+  password_digest TEXT NOT NULL
+);
